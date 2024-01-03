@@ -1,0 +1,19 @@
+<!-- produits.component.html -->
+<div class="col-sm-4 col-md-4 col-lg-4 mb-4"> 
+    <label>Categories </label> 
+    <select class="form-control form-control-lg" id="idCat" 
+    name="idCat" [(ngModel)]="IdCategorie" (change)="onChange()"> <option *ngFor="let cat of categories" value="{{cat.idCat}}"> 
+        {{cat.nomCat}} </option> </select> </div>
+<div *ngFor="let bid of bids" class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ bid.nomBid }}</h5>
+        <p class="card-text">Description: {{ bid.description }}</p>
+        <p class="card-text">Prix max: {{ bid.prixMaxBid}}</p>
+        <p class="card-text">Prix min: {{ bid.prixMinBid }}</p>
+        <p class="card-text">Date de début: {{ bid.startTime?.toLocaleString() }}</p>
+        <p class="card-text">Date de fin: {{ bid.endTime?.toLocaleString() }}</p>
+        <p class="card-text">Catégorie: {{ bid.categorie?.nomCat || 'N/A' }}</p>
+
+    </div>
+  </div>
+  

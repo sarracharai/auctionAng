@@ -1,0 +1,54 @@
+<div class="container">
+    <div>
+      <h2>Update Bid :</h2>
+    </div>
+    <form>
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>Bid Id</label>
+        <input r type="text" [(ngModel)]="currentBid.idBid" name="idBid" class="form-control">
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Bid Name</label>
+        <input type="text" [(ngModel)]="currentBid.nomBid" name="nomBid" class="form-control">
+      </div>
+  
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Description</label>
+        <textarea [(ngModel)]="currentBid.description" name="description" class="form-control" rows="4"></textarea>
+      </div>
+  
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>Max Price</label>
+        <input type="number" [(ngModel)]="currentBid.prixMaxBid" name="prixMaxBid" class="form-control">
+      </div>
+  
+      <div class="col-sm-2 col-md-2 col-lg-2">
+        <label>Min Price</label>
+        <input type="number" [(ngModel)]="currentBid.prixMinBid" name="prixMinBid" class="form-control">
+      </div>
+  
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Start Time</label>
+        <input type="date" [ngModel]="currentBid.startTime | date: 'yyyy-MM-dd'" (ngModelChange)="currentBid.startTime = $event" name="startTime" class="form-control">
+      </div>
+  
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>End Time</label>
+        <input type="date" [ngModel]="currentBid.endTime | date: 'yyyy-MM-dd'" (ngModelChange)="currentBid.endTime = $event" name="endTime" class="form-control">
+      </div>
+  
+      <div class="col-sm-4 col-md-4 col-lg-4">
+        <label>Categorie</label>
+        <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="updatedCatId">
+          <option *ngFor="let cat of categories" [value]="cat.idCat">
+            {{cat.nomCat}}
+          </option>
+        </select>
+      </div>
+  
+      <div class="mt-2">
+        <button type="submit" (click)="updateBid()" class="btn btn-success">Update</button>
+      </div>
+    </form>
+  </div>
+  

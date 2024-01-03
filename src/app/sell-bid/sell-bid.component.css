@@ -1,0 +1,37 @@
+.container {
+    max-width: 800px; /* Ajustez la largeur maximale selon vos besoins */
+    margin: auto; /* Centrez le formulaire dans la page */
+    padding: 20px;
+    background-color: #f4f4f4; /* Couleur de fond pour le conteneur */
+    border-radius: 8px; /* Bords arrondis */
+}
+
+h2 {
+    color: #333; /* Couleur du texte du titre */
+}
+
+label {
+    display: block; /* Assurez-vous que les libellés sont sur une nouvelle ligne */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box; /* Garantit que la taille du contenu ne change pas avec les bordures et les rembourrages */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Couleur de fond du bouton au survol */
+}
